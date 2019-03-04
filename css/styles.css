@@ -54,7 +54,7 @@ body {
 }
 
 .source:before {
-  content: "—";
+  content: "-";
 }
 
 .citation {
