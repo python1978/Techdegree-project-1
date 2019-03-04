@@ -7,12 +7,7 @@ project 1 - A Random Quote Generator
 
 
 /*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
+  Create the array of quote objects.
 ***/
 let quotes = [
   {
@@ -37,7 +32,9 @@ let quotes = [
   },
   {
     quote: "The secret of getting ahead is getting started.",
-    source: "Mark Twain"
+    source: "Mark Twain",
+    citation: "Letter to Henry H. Rogers",
+    year: 1897
   },
   {
     quote: "We love life, not because we are used to living but because we are used to loving.",    
@@ -91,7 +88,8 @@ let quotes = [
   },
   {
     quote: "Where there is love there is life.",
-    source: "Mahatma Gandhi"
+    source: "Mahatma Gandhi",
+    year: 1930
   },
   {
     quote: "Don't judge each day by the harvest you reap but by the seeds that you plant.",
@@ -102,28 +100,19 @@ let quotes = [
 
 
 /***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+  Create the `getRandomQuote` function.
+  Get a random nnumber between 0 and quotes array length
+  Return random object
 ***/
 function getRandomQuote(){
   let randomQuoteIndex = Math.floor(Math.random()*quotes.length); 
-  return quotes[randomQuoteIndex];
+  return quotes[randomQuoteIndex]; 
 }
 
 
 
 /***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
+  Create the `printQuote` and create the innerHTML
 ***/
 function printQuote() {
   let quoteObj = getRandomQuote();
@@ -144,13 +133,7 @@ function printQuote() {
 
 
 /***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
+ Button pressed event - load random quote;
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
