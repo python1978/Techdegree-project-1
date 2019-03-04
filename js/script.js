@@ -101,8 +101,8 @@ let quotes = [
 
 /***
   Create the `getRandomQuote` function.
-  Get a random nnumber between 0 and quotes array length
-  Return random object
+  Get a random number between 0 and quotes array length.
+  Return random object from array
 ***/
 function getRandomQuote(){
   let randomQuoteIndex = Math.floor(Math.random()*quotes.length); 
@@ -118,7 +118,7 @@ function printQuote() {
   let quoteObj = getRandomQuote();
   let stringHTML = "";  
   let myOutputParagraph = document.getElementById('quote-box');
-  stringHTML = "<p class=\"quote\">" + quoteObj.quote + "</p><br>";
+  stringHTML = "<p class=\"quote\">" + quoteObj.quote + "</p>";
   stringHTML +="<p class=\"source\">"+ quoteObj.source;
   if (quoteObj.citation) {
      stringHTML += "<span class=\"citation\">"+quoteObj.citation+"</span>";
