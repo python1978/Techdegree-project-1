@@ -1,82 +1,56 @@
-let quotes = [
-  {
-    quote: "Happiness can exist only in acceptance.",
-    author: "George Orwell",    
-  },
-  {
-    quote: "Love has no age, no limit; and no death.",
-    author: "John Galsworthy"
-  },
-  {
-    quote: "You can't blame gravity for falling in love.",
-    author: "Albert Einstein"
-  },
-  {
-    quote: "I have not failed. I've just found 10,000 ways that won't work.",
-    author: "Thomas A. Edison"
-  },
-  {
-    quote: "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
-    author: "Benjamin Franklin"
-  },
-  {
-    quote: "The secret of getting ahead is getting started.",
-    author: "Mark Twain"
-  },
-  {
-    quote: "We love life, not because we are used to living but because we are used to loving.",    
-    author: "Friedrich Nietzsche"
-  },
-  {
-    quote: "If you cannot do great things, do small things in a great way.",
-    author: "Napoleon Hill"
-  },
-  {
-    quote: "The supreme art of war is to subdue the enemy without fighting.",
-    author: "Sun Tzu"
-  },
-  {
-    quote: "You can't blame gravity for falling in love.",
-    author: "Albert Einstein"
-  },
-  {
-    quote: "Honesty is the first chapter in the book of wisdom.",
-    author: "Thomas Jefferson"
-  },
-  {
-    quote: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
-    author: "Marcus Aurelius"
-  },
-  {
-    quote: "Life isn't about finding yourself. Life is about creating yourself.",
-    author: "George Bernard Shaw"
-  },
-  {
-    quote: "The only true wisdom is in knowing you know nothing.",
-    author: "Socrates"
-  },
-  {
-    quote: "A kiss is a lovely trick designed by nature to stop speech when words become superfluous.",
-    author: "Ingrid Bergman"
-  },
-  {
-    quote: "Believe you can and you're halfway there.",
-    author: "Theodore Roosevelt"
-  },
-  {
-    quote: "In three words I can sum up everything I've learned about life: it goes on.",
-    author: "Robert Frost"
-  },
-  {
-    quote: "Blessed are the hearts that can bend; they shall never be broken.",
-    author: "Albert Camus"
-  },
-  {
-    quote: "Where there is love there is life.",
-    author: "Mahatma Gandhi"
-  },
-  {
-    quote: "Don't judge each day by the harvest you reap but by the seeds that you plant.",
-    author: "Robert Louis Stevenson"
-  }
-];
+/******************************************
+Treehouse FSJS Techdegree:
+project 1 - A Random Quote Generator
+******************************************/
+
+// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
+
+
+/*** 
+  Create the array of quote objects and name it `quotes`.
+  Add at least five quote objects to the `quotes` array.
+  Give each quote object a `quote` and `source` property.
+  Add the `citation` property to at least one object in the array.
+  Add the `year` property to at least one object in the array.
+  Use console.log() to log your array of quotes to the console.
+***/
+
+
+
+
+/***
+  Create the `getRandomQuote` function to:
+   - Create a variable to store a random number 
+   - Cse the random number to `return` a random quote object from the `quotes` array.
+***/
+
+
+
+
+/***
+  Create the `printQuote` function to: 
+   - Call the `getRandomQuote` function and assign it to a variable.
+   - Create a variable for the HTML string and set it equal to an empty string.
+   - Use the HTML template in the instructions or the markup in the index.html file, AND 
+     the random quote vairable to build your HTML string.
+   - Add the quote and source section to the HTML string.
+   - Use an if statement to check for the citation property before adding it to the HTML string.
+   - Use an if statement to check for the year property before adding it to the HTML string.
+   - Don't forget to close that final `p` tag.
+   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
+***/
+
+
+
+
+/***
+  When the "Show another quote" button is clicked, the event listener 
+  below will be triggered, and it will call, or "invoke", the `printQuote` 
+  function. So do not make any changes to the line of code below this 
+  comment.
+***/
+
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+
+// Remember to delete the comments that came with this file, and replace them with your own code comments.
