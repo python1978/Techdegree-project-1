@@ -142,7 +142,9 @@ function randomColor(){
   document.body.style.backgroundColor = color.slice(0,-1)+")";
 }
 
-
+// getQuote function runs every 20 seconds and generate a new background color 
+var intervalID = setInterval(printQuote, 20000);
+// clear(intervalID); //will cleat the interval
 /***
  Button pressed event - load random quote;
 ***/
