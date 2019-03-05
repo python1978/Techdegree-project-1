@@ -139,7 +139,7 @@ function randomColor(){
   c = Math.floor(Math.random()*256);  
   color += c + ",";
   }
-  document.body.style.backgroundColor = color.slice(0,-1)+")";
+  document.body.style.backgroundColor = color.slice(0,color.length-1)+")";
 }
 
 // getQuote function runs every 20 seconds and generate a new background color 
