@@ -6,13 +6,13 @@ project 1 - A Random Quote Generator
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
-/*** 
+/***
   Create the array of quote objects.
 ***/
 let quotes = [
   {
     quote: "Happiness can exist only in acceptance.",
-    source: "George Orwell",    
+    source: "George Orwell",
   },
   {
     quote: "Love has no age, no limit; and no death.",
@@ -37,7 +37,7 @@ let quotes = [
     year: 1897
   },
   {
-    quote: "We love life, not because we are used to living but because we are used to loving.",    
+    quote: "We love life, not because we are used to living but because we are used to loving.",
     source: "Friedrich Nietzsche"
   },
   {
@@ -105,8 +105,8 @@ let quotes = [
   Return random object from array
 ***/
 function getRandomQuote(){
-  let randomQuoteIndex = Math.floor(Math.random()*quotes.length); 
-  return quotes[randomQuoteIndex]; 
+  let randomQuoteIndex = Math.floor(Math.random()*quotes.length);
+  return quotes[randomQuoteIndex];
 }
 
 
@@ -116,7 +116,7 @@ function getRandomQuote(){
 ***/
 function printQuote() {
   let quoteObj = getRandomQuote();
-  let stringHTML = "";  
+  let stringHTML = "";
   let myOutputParagraph = document.getElementById('quote-box');
   stringHTML = "<p class=\"quote\">" + quoteObj.quote + "</p>";
   stringHTML +="<p class=\"source\">"+ quoteObj.source;
@@ -128,8 +128,20 @@ function printQuote() {
   }
   stringHTML += "</p>";
   myOutputParagraph.innerHTML = stringHTML;
+  randomColor();
 }
-
+/*
+  function which generate a random color
+*/
+function randomColor(){
+  let color = "rgb(";
+  for (let i = 0; i < 3; ++i){
+  c = Math.floor(Math.random()*256);
+  console.log(c);
+  color += c + ",";
+  }
+  document.body.style.backgroundColor = color.slice(0,-1)+")";
+}
 
 
 /***
