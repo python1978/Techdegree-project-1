@@ -136,8 +136,7 @@ function printQuote() {
 function randomColor(){
   let color = "rgb(";
   for (let i = 0; i < 3; ++i){
-  c = Math.floor(Math.random()*256);
-  console.log(c);
+  c = Math.floor(Math.random()*256);  
   color += c + ",";
   }
   document.body.style.backgroundColor = color.slice(0,-1)+")";
